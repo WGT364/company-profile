@@ -22,14 +22,18 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
     const backToTopButton = document.getElementById("back-to-top");
+    const whatsappButton = document.querySelector('.whatsapp-button');
+    
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         backToTopButton.style.display = "block";
+        whatsappButton.style.bottom = '100px'; // Moves the WhatsApp button up when scrolling
     } else {
         backToTopButton.style.display = "none";
+        whatsappButton.style.bottom = '30px'; // Resets the WhatsApp button to its original position
     }
 }
 
-// Fungsi untuk menggulir ke atas
+// Scroll to the top when "back to top" button is clicked
 document.getElementById('back-to-top').addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
