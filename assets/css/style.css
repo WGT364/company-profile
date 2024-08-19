@@ -268,12 +268,6 @@ body {
 	font-weight: 100;
 }
 
-.skills-container {
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-}
-
 .skill {
 	flex: 1;
 	max-width: 200px;
@@ -297,9 +291,16 @@ body {
 	color: #06D001;
 }
 
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Default 4 kolom */
+    gap: 20px; /* Jarak antar item */
+    justify-items: center; /* Rata tengah konten dalam grid */
+}
+
 @media (max-width: 1024px) {
     .skills-container {
-        grid-template-columns: repeat(2, 1fr); /* 2 kolom pada layar sedang */
+        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom pada layar sedang */
     }
 }
 
@@ -319,12 +320,9 @@ body {
 }
 
 @media (max-width: 480px) {
-    
-    .skills-section h2 {
-        font-size: 1.5rem;
-    }
     .skills-container {
-        grid-template-columns: 2fr; /* 1 kolom pada layar sangat kecil */
+        grid-template-columns: repeat(2, 1fr); /* Tetap 2 kolom pada layar kecil */
+        gap: 15px; /* Mengurangi jarak antar item */
     }
 
     .skill img {
@@ -333,9 +331,10 @@ body {
     }
 
     .skill p {
-        font-size: 0.9rem; /* Perkecil lagi ukuran teks */
+        font-size: 0.8rem; /* Perkecil lagi ukuran teks */
     }
 }
+
 
 .segments {
 	margin: 0;
@@ -597,8 +596,8 @@ body {
 }
 @media (max-width: 992px) { /* Ukuran untuk tablet dan perangkat lebih kecil */
     .client-partner {
-        flex: 1 1 calc(50% - 15px); /* Adjust width for 2 items per row */
-        max-width: calc(50% - 15px); /* Pastikan lebar maksimum 50% */
+        flex: 1 1 calc(100% - 15px); /* Membuat card lebih lebar dengan mengatur ke 100% */
+        max-width: calc(100% - 15px); /* Lebar maksimum 100% dengan jarak 15px */
     }
 
     .clients-partners-section h2 {
@@ -618,8 +617,8 @@ body {
 
 @media (max-width: 768px) { /* Ukuran untuk ponsel dan perangkat lebih kecil */
     .client-partner {
-        flex: 1 1 calc(50% - 10px); /* Pertahankan 2 item per row */
-        max-width: calc(50% - 10px); /* Lebar maksimum 50% */
+        flex: 1 1 calc(100% - 10px); /* Membuat card lebih lebar dengan mengatur ke 100% */
+        max-width: calc(100% - 10px); /* Lebar maksimum 100% dengan jarak 10px */
     }
 
     .clients-partners-section h2 {
@@ -639,8 +638,8 @@ body {
 
 @media (max-width: 480px) { 
     .client-partner {
-        flex: 1 1 calc(50% - 10px); /* Mengatur 2 item per row */
-        max-width: calc(50% - 10px); /* Lebar maksimum 50% dengan jarak 10px */
+        flex: 1 1 calc(100% - 10px); /* Membuat card lebih lebar dengan mengatur ke 100% */
+        max-width: calc(100% - 10px); /* Lebar maksimum 100% dengan jarak 10px */
     }
 
     .clients-partners-section h2 {
