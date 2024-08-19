@@ -207,7 +207,7 @@ button:hover {
     }
 
     .project-card img {
-        width: 100px; /* Adjust image width */
+        width: 120px; /* Adjust image width */
         margin-bottom: 10px;
         margin-right: 0;
     }
@@ -221,7 +221,7 @@ button:hover {
     }
 
     .buttons {
-        gap: 8px; /* Adjust button spacing */
+        gap: 10px; /* Adjust button spacing */
         justify-content: center; /* Center buttons */
         flex-wrap: wrap; /* Wrap buttons to the next line */
     }
@@ -239,7 +239,7 @@ button:hover {
     }
 
     .project-card img {
-        width: 80px; /* Adjust image width for smaller screens */
+        width: 120px; /* Adjust image width for smaller screens */
         margin-bottom: 10px;
         margin-right: 0;
     }
