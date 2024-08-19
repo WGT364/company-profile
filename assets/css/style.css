@@ -567,9 +567,18 @@ body {
 }
 
 .client-partner {
-	flex: 1 1 calc(25% - 30px); /* Adjust width for 4 items per row */
+	flex: 1 1 calc(25% - 30px); /* Mengatur lebar untuk 4 item per baris */
 	max-width: 300px;
 	margin: 0 auto;
+	border: 1px solid #ddd; /* Menambahkan border */
+	border-radius: 8px; /* Membuat border melengkung */
+	padding: 15px; /* Menambahkan padding di dalam card */
+	background-color: #f9f9f9; /* Menambahkan warna latar belakang card */
+	transition: box-shadow 0.3s; /* Transisi untuk efek hover */
+}
+
+.client-partner:hover {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
 }
 
 .client-partner img {
@@ -578,10 +587,7 @@ body {
 	max-width: 300px;
 	margin-bottom: 15px;
 	transition: transform 0.3s;
-}
-
-.client-partner img:hover {
-	transform: scale(1.1);
+	border-radius: 4px; /* Membuat gambar melengkung di sudut */
 }
 
 .client-partner p {
